@@ -1,3 +1,4 @@
+
 "use client";
 import { useState,useEffect } from "react"; 
 import Link from "next/link";
@@ -40,7 +41,7 @@ export default function Dashboard () {
     return (
         <main className="min-h-[480px] grid md:grid-cols-2 md:gap-8 lg:gap-12 px-3 md:px-12 lg:px-24 py-12">
             <section className="grid grid-cols-2 grid-rows-2 gap-3 p-1">
-                <Link href="/dashboard/create" c  b lassName={styles.btn}>
+                <Link href="/dashboard/create" className={styles.btn}>
                     <CiCirclePlus className={styles.iconStyle}/>
                     <span className={styles.btnText}>Create</span>
                 </Link>
@@ -73,7 +74,7 @@ export default function Dashboard () {
                             qty={item.data.quantity}
                             tick={item.data.ticker}
                             price={item.data.price}
-                            notes={item.data.notes} 
+                            notes={item.data.notes}
                             img={item.data?.thumbnail}
                             key={item.id}/>
                         )
